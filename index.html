@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Colors Of Felines</title>
+	<meta charset="utf-8">
+	<meta name="description" content="Color Patterns of Felines">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="css/css.css" rel="stylesheet">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<!--Gallery-->	
+<script>
+	$(document).ready(function(){
+	$('#gallery a').click(function(){
+		var galleryHref = $(this).attr('href');
+		var galleryAlt = $(this).attr('title');
+		$('figure img').attr({ src: galleryHref, alt: galleryAlt });
+		$('figcaption').html(galleryAlt);
+		 return false;
+	});
+});
+</script>
+</head>
+
+
+<body>
+<!--Wrapper-->
+	<div id="wrapper">
+<!--Header Section-->
+		<header>
+		<div id="group">
+		</div>
+			<h1>COLORS OF FELINES</h1>
+		</header>
+<!--Navigation section-->
+		<nav>
+			<a href="index.html">Home</a> &nbsp;
+			<a href="description.html">Color Patterns</a>  &nbsp;
+			<a href="contact.html">Contact Us</a>
+		</nav>
+	</div>
+<!--Main-->
+<main>
+		<h3>Cats come to us in various coat colors and patterns, each having their own beautiful and unique flare. Colors of Felines is here to inform you about these beautiful coats and patters.</h3>
+
+<!--Gallery Section-->
+
+<h1>Image Gallery</h1>
+<div id="gallery">
+	 <ul>
+	   <li>
+		 <a href="images/tabby.jpg"  title="Tabby Cat"><img src="images/tabbythumb.jpg" width="100" height="75"  alt="Tabby Cat"></a>
+	   </li>
+	   <li>
+		 <a href="images/calico.jpg" title="Calico Cat"><img src="images/calicothumb.jpg" width="100" height="75" alt="Calico Cat"></a>  
+	   </li>
+	   <li>
+		 <a href="images/tuxedo.jpg" title="Tuxedo Cat"><img src="images/tuxedothumb.jpg" width="100" height="75" alt="Tuxedo Cat"></a>
+	   </li>
+	   <li>
+		 <a href="images/tortoiseshell.jpg" title="Tortoiseshell Cat"><img src="images/tortoiseshellthumb.jpg" width="100" height="75" alt="Tortoiseshell Cat"></a>
+	   </li>
+	   <li>
+		 <a href="images/colorpoint.jpg" title="Colorpoint Cat"><img src="images/colorpointthumb.jpg" width="100" height="75" alt="Colorpoint Cat"></a>
+	   </li>
+	   <li>
+		<a href="images/solid.jpg" title="Solid Cat"><img src="images/solidthumb.jpg" width="100" height="75" alt="Solid Cat"></a>
+	   </li>
+	   <li>
+		 <a href="images/bicolor.jpg" title="Bi&mdash;Color Cat"><img src="images/bicolorthumb.jpg" width="100" height="75" alt="Bi&mdash;Color Cat"></a>
+	   </li>
+	   <li>
+		<a href="images/smoked.jpg" title="Smoked Cat"><img src="images/smokedthumb.jpg" width="100" height="75" alt="Smoked Cat"></a>
+	   </li>
+	 </ul>
+			<figure>
+				<img src="images/tabby.jpg" width="300" height="200" alt="Tabby Cat">
+				<figcaption>Tabby Cat</figcaption>
+			</figure>
+</div>
+<br class="clear">
+
+<!--Form section-->
+<div id="forma">
+<br><br>
+<form method="post" action="https://webdevbasics.net/scripts/demo.php" target="_blank">
+	<span>
+	Which Coat pattern do You like the best:
+	</span>
+<br><br>
+		<div id="box">
+			<input type="checkbox" name="Tabby" id="tab" value="50%">
+				<label for="tab">Tabby</label><br><br>
+			<input type="checkbox" name="Calico" id="cal" value="90%">
+				<label for="cal">Calico</label><br><br>
+			<input type="checkbox" name="Tuxedo" id="tux" value="85%">
+				<label for="tux">Tuxedo</label><br><br>
+			<input type="checkbox" name="Tortoiseshell" id="tor" value="55%">
+				<label for="tor">Tortoiseshell</label><br><br>
+			<input type="checkbox" name="Colorpoint" id="col" value="40%">
+				<label for="col">Colorpoint</label><br><br>
+			<input type="checkbox" name="Solid" id="sol" value="33%">
+				<label for="sol">Solid</label><br><br>
+			<input type="checkbox" name="BiColor" id="bic" value="45%">
+				<label for="bic">Bi&mdash;Color</label><br><br>
+			<input type="checkbox" name="Smoked" id="smo" value="67%">
+				<label for="smo">Smoked</label>
+		</div>
+<br><br>
+	<span>
+	<button type="submit">Submit</button>
+	</span>
+</form>
+</div>
+</main>
+
+<!--footer section-->
+<footer>
+		Copyright &copy; 2024 Colors Of Felines<br>
+			<a href="mailto:epcasias@amarillocollege.com">Euly Casias</a>
+			<br>
+		<div>
+			<script>
+				document.write("This page was last modified on: " + document.lastModified)
+			</script>
+		</div>
+</footer>
+</body>
+</html>

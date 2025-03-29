@@ -1,4 +1,4 @@
-//CASE PROJECT #1: Adding Else if statement to Pages
+//CASE PROJECT #2: Adding Else if statement to Pages
 //Author: Eulyssia casias
 //Date: 3/29/25
 

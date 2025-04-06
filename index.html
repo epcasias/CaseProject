@@ -7,8 +7,29 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link href="css/css.css" rel="stylesheet">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-	<script src="case project.js"></script>
+	<script src="caseProject.js"></script>
 
+</head>
+	<body>
+<!--Wrapper-->
+<!--Header Section-->
+	<div id="wrapper">
+		<header>
+		<div id="group"></div>
+		<h1 id="indexTitle">COLORS OF FELINES</h1>
+		</header>
+<!--Navigation section-->
+		<nav>
+			<a href="index.html" >Home</a> &nbsp;
+			<a href="description.html" >Color Patterns</a>  &nbsp;
+			<a href="contact.html" >Contact Us</a>
+		</nav>
+</div>
+<!--Main-->
+<main>
+		<h3>Cats come to us in various coat colors and patterns, each having their own beautiful and unique flare. Colors of Felines is here to inform you about these beautiful coats and patters.</h3>
+
+<!--Gallery Section-->
 <!--Gallery-->	
 <script>
 	$(document).ready(function(){
@@ -21,32 +42,7 @@
 	});
 });
 </script>
-</head>
-
-
-<body>
-<!--Wrapper-->
-	<div id="wrapper">
-<!--Header Section-->
-		<header>
-		<div id="group">
-		</div>
-			<h1>COLORS OF FELINES</h1>
-		</header>
-<!--Navigation section-->
-		<nav>
-			<a href="index.html" id="catGallery">Home</a> &nbsp;
-			<a href="description.html" id="descriptions">Color Patterns</a>  &nbsp;
-			<a href="contact.html" id="contact">Contact Us</a>
-		</nav>
-	</div>
-<!--Main-->
-<main>
-		<h3>Cats come to us in various coat colors and patterns, each having their own beautiful and unique flare. Colors of Felines is here to inform you about these beautiful coats and patters.</h3>
-
-<!--Gallery Section-->
-
-<h1>Image Gallery</h1>
+<h1>GALLERY</h1>
 <div id="gallery">
 	 <ul>
 	   <li>
@@ -82,35 +78,35 @@
 <br class="clear">
 
 <!--Form section-->
-<div id="forma">
+<div id="form">
 <br><br>
-<form method="post" action="https://webdevbasics.net/scripts/demo.php" target="_blank">
-	<span>
-	Which Coat pattern do You like the best:
-	</span>
+<form id="favCat" action="https://webdevbasics.net/scripts/demo.php" method="post">
 <br><br>
 		<div id="box">
-			<input type="checkbox" name="Tabby" id="tab" value="50%">
+			<p>Which Coat pattern do You like the best:</p>
+			<input type="radio" name="fav_coat" id="tab" value="TABBY:40%">
 				<label for="tab">Tabby</label><br><br>
-			<input type="checkbox" name="Calico" id="cal" value="90%">
+			<input type="radio" name="fav_coat" id="cal" value="CALICO:60%">
 				<label for="cal">Calico</label><br><br>
-			<input type="checkbox" name="Tuxedo" id="tux" value="85%">
+			<input type="radio" name="fav_coat" id="tux"  value="TUXEDO:55%">
 				<label for="tux">Tuxedo</label><br><br>
-			<input type="checkbox" name="Tortoiseshell" id="tor" value="55%">
+			<input type="radio" name="fav_coat" id="tor" value="TORTOISESHELL:30%">
 				<label for="tor">Tortoiseshell</label><br><br>
-			<input type="checkbox" name="Colorpoint" id="col" value="40%">
+			<input type="radio" name="fav_coat" id="col" value="COLORPOINT:20%">
 				<label for="col">Colorpoint</label><br><br>
-			<input type="checkbox" name="Solid" id="sol" value="33%">
+			<input type="radio" name="fav_coat" id="sol" value="SOLID:65%">
 				<label for="sol">Solid</label><br><br>
-			<input type="checkbox" name="BiColor" id="bic" value="45%">
+			<input type="radio" name="fav_coat" id="bic"  value="BICOLOR:30%">
 				<label for="bic">Bi&mdash;Color</label><br><br>
-			<input type="checkbox" name="Smoked" id="smo" value="67%">
-				<label for="smo">Smoked</label>
+			<input type="radio" name="fav_coat" id="smo" value="SMOKED:36%">
+				<label for="smo">Smoked</label><br><br>
+			<input type="submit" value="Submit" onclick="selectOption()">
+			<input type="reset" value="reset">
 		</div>
 <br><br>
-	<span>
-	<button type="submit">Submit</button>
-	</span>
+<!--"https://webdevbasics.net/scripts/demo.php"-->
+			
+
 </form>
 </div>
 </main>

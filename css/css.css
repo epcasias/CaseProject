@@ -4,8 +4,9 @@ nav {
 	text-align: center; /*Align text to the Center*/
 	background-color: #FFFFCC;  /*set background color*/
 	padding: 1em; /*Add bottom padding*/
-	border: 2px dashed #D9CD3D; /*Add top Border*/
+	border: 4px solid #4d0d72; /*Add top Border*/
 	margin: 0; /*set margin to 0*/
+	position: sticky;
 }
 nav a {
 	text-decoration: none; /*remove default link underline*/
@@ -21,9 +22,9 @@ nav a:hover {
 
 /*STYLES FOR IMAGES*/
 #group {
-	height: 600px; /*set image height*/
+	height: 400px; /*set image height*/
 	background-image: url(../images/group.jpg); /*Set background image*/
-	background-size: cover; /*Cover entire element with background image*/
+	background-size: auto; /*Cover entire element with background image*/
 	background-repeat: no-repeat; /*Prevent background image from repeating*/
 	background-position: center; /*set image position to center*/
 }
@@ -43,14 +44,30 @@ body {
 	color: #000000;  /*set font color*/
 	font-family: Georgia, Arial, sans-serif;  /*set font for text*/
 }
-	
+
+#indexTitle { 
+	display: block;
+	text-align: center; /*Align text to the Center*/
+	background-color: #dabdf5;  /*set background color*/
+	padding: 15px; /*Add bottom padding*/
+	margin: 0;
+	color:#000000;
+	border: none;
+}
+
 h1 { 
 	display: block;
 	text-align: center; /*Align text to the Center*/
-	background-color: #E6CCFF;  /*set background color*/
-	padding: 15px; /*Add bottom padding*/
+	border-bottom-style: solid;
+	border-color:#000000;
+	border-width: 5px;
+	color:#4d0d72;
+	padding: 10px; /*Add bottom padding*/
+	padding-bottom: 5px;
 	margin-top: 0; /*remove top margin*/
 	margin-bottom: 0;  /*remove bottom margin*/
+	margin-left: 500px;
+	margin-right:500px;
 }
 h2 {
 	text-align: center; /*align h2 to center*/
@@ -59,6 +76,8 @@ h3 {
 	text-align: center;  /*align h3 to center*/	
 	padding-left: 15px; /*set left padding*/
 	padding-right: 15px; /*set right padding*/
+	margin-left: 50px;
+	margin-right: 50px;
 }
 h4 {
 	text-align: center; /*align text to center*/
@@ -66,105 +85,144 @@ h4 {
 	margin: 0 auto; /*delete margin and move to center*/
 	padding-top: 30px; /*add top padding*/
 	padding-bottom: 30px; /*add bottom padding*/
-	width: 80%; /*set width to 80% of page*/
-	border-right: 4px dashed #8B008B; /*add right border style*/
-	border-left: 4px dashed #8B008B; /*add left border style*/
+	padding-left: 0;
+	padding-right: 0;
+	width: auto; /*set width to 80% of page*/
+	
 }
+
 #subhead {
 	text-align: center; /*aliugn text to center*/
 	background-image: linear-gradient(to right, #9932CC, #E6CCFF, #F5F5F5, #F5F5F5, #E6CCFF, #9932CC); /*set background gradient*/
-	margin: 0; /*delete margin*/
+	margin-left: 100px; /*delete margin*/
+	margin-right: 100px;
+	margin-bottom: 0;
 	padding-top: 20px; /*add top padding*/
-	padding-bottom: 20px; /*add bottom padding*/
+	padding-bottom: 20px;
 }
 hr {
-	border: 2px dashed #8B008B; /*set border weight style and color*/
 	width: 80%; /*set to take up 80& of page*/
 	margin: 0 auto; /* delete margin and center*/
+}
+#socials {
+	display: block;
+	border-style: solid;
+	border-color:#4d0d72;
+	border-width: 4px;
+	margin-left: 400px;
+	margin-right: 400px;
+
 }
 
 /*STYLES FOR GALLERY*/
 #gallery { 
+		display: block;
 		background-image: linear-gradient(to right, #9932CC, #E6CCFF, #E6CCFF, #9932CC); /*set background gradient*/
-		width: 100%; /*set width to 100% of page*/
-		margin: 0 auto; /*delete margin and center*/
-		padding-top: 20px; /*add top padding*/
+		width: 50%;
+		margin-top: 50px;
+		padding-top: 50px; /*add top padding*/
 		padding-bottom: 50px; /*add bottom padding*/
 		}
 #gallery ul { 
         list-style-type: none; /*remove bullet points*/
 		float: left; /*set to move to left of page*/
 		margin: 0; /*no margin*/
-		padding: 0; /*no padding*/
+		padding-left: 70px; /*no padding*/
+		padding-top: 60px;
 		}
 #gallery li { 
 		display: inline; 
 		float: left;
 		padding: 0;
+		border: none;
 		}
 #gallery img { 
 		border-style: none; /*no border style*/
 		width: 40%; /*size down images*/
 		}
 figure { 
-		padding-top: 20px; /*add top padding*/
+		padding-top: 10px; /*add top padding*/
 		text-align: center; /*align text to center*/
-		}
+		border-style: solid;
+		border-color:#FFFFCC;
+		border-width: 4px;
+}
+
+
 figcaption { 
 		font-weight: bold; /*set text to bold*/
         font-size: 1.5em; /*set font size*/
-		padding-top: 30px; /*add top padding*/
+		padding-top: 20px; /*add top padding*/
+		padding-bottom: 20px;
 		}
 
 
 /*STYLES FOR FORM*/
-form {
+#form {
 	background-image: url(../images/paws.jpg);
 	background-repeat: repeat;
 	width: 350px;
     margin: auto;
+	margin-top: 30px;
+	margin-bottom: 30px;
 	padding-left: 10px;
 	padding-right: 10px;
-	padding-top: 10px;
-	padding-bottom: 10px;
+	padding-top: 0;
+	padding-bottom: 0;
 }
 #box {
-	background-color: #E6CCFF;
-	padding-top: 4px;
-	padding-bottom: 4px;
+	background: rgb(0, 0, 0, 0.75);
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 10px;
+	margin-bottom: 20px;
+	color:#ffffff;
 }
-span {
-	background-color: #E6CCFF;
-	padding-top: 4px;
-	padding-bottom: 4px;
+
+/*span {
+	background-color: #000000;
+	padding-top: 8px;
+	padding-bottom: 8px;
 	padding-left: 10px;
 	padding-right: 10px;
-}
+	color:#ffffff;
+	opacity: 75%;
+}*/
+
 
 
 /*STYLES FOR TABLE*/
 table { 
-	width: 100%; /*takes 75% of parent container*/
-	margin: auto;
-	border: 2px dashed #000000; /*set border weight, style, and color*/
+	width: auto; /*takes 75% of parent container*/
+	margin-left: 100px;
+	margin-right: 100px;
+	border: 3px solid #4d0d72; /*set border weight, style, and color*/
 	border-spacing: 0 /*remove border spacing*/
 }
 th.pattern {
 	width: 200px;
-	border: none; /*remove border*/
+	border-bottom: solid; /*remove border*/
+	border-color: #ffffff;
+	border-width: 3px;
 	text-align: center; /*align text to center*/
 	padding-top: 5px; /*set top padding*/
 	padding-bottom: 5px;  /*set bottom padding*/
 	padding-left: 8px;  /*set left padding*/
 	padding-right: 15px;  /*set right padding*/
 	font-size: 25px;
+	background-color: #000000;
+	color:#ffffff;
+
 }
 td {
-	width: 300px;
-	padding-left: 20px;
+	width: 200px;
+	padding-left: 10px;
+	border-bottom: solid; /*remove border*/
+	border-color: #ffffff;
+	border-width: 3px;
 }
 
-td img {
+td.img {
 	width: 100%;
 	height: auto;
 	padding-top: 5px; /*set top padding*/
@@ -175,8 +233,12 @@ td.text {
 	padding-left: 10px;
 	padding-right: 10px;
 	font-size: 20px;
-	width: 800px;
+	width: 750px;
 	margin-left: 0;
+	margin-right: 50px;
+	border-bottom: solid; /*remove border*/
+	border-color: #ffffff;
+	border-width: 3px;
 }
 	
 tr:nth-of-type(odd) { background-color: #FFFFCC; } /*pseudocode for table row*/
@@ -308,7 +370,7 @@ footer {
 			padding-bottom: 0;
 			padding-left: 6px;
 			padding-right: 0;
-			width: 40px;
+			width: 50px;
 		}
 		td {
 			width:200px;
@@ -361,6 +423,9 @@ footer {
 		#flow {
 			display: flex; /*felxible container*/
 			flex-direction: column;
+		}
+		th.pattern {
+			width: 15%;
 		}
 		#mobile { display: none; } /*hide element*/
 		#desktop {display: none; }

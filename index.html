@@ -7,7 +7,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link href="css/css.css" rel="stylesheet">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-	<script src="caseProject.js"></script>
+	<script src="caseProject.js" defer></script>
 
 </head>
 	<body>
@@ -80,35 +80,45 @@
 <!--Form section-->
 <div id="form">
 <br><br>
-<form id="favCat" action="https://webdevbasics.net/scripts/demo.php" method="post">
+<form id="favCat" action="https://webdevbasics.net/scripts/demo.php" method="post" onsubmit="return examineEmail(event)">
 <br><br>
 		<div id="box">
 			<p>Which Coat pattern do You like the best:</p>
-			<input type="radio" name="fav_coat" id="tab" value="TABBY:40%">
+			<input type="radio" name="fav_coat" id="tab" value="TABBY:40%"/>
 				<label for="tab">Tabby</label><br><br>
-			<input type="radio" name="fav_coat" id="cal" value="CALICO:60%">
-				<label for="cal">Calico</label><br><br>
-			<input type="radio" name="fav_coat" id="tux"  value="TUXEDO:55%">
-				<label for="tux">Tuxedo</label><br><br>
-			<input type="radio" name="fav_coat" id="tor" value="TORTOISESHELL:30%">
-				<label for="tor">Tortoiseshell</label><br><br>
-			<input type="radio" name="fav_coat" id="col" value="COLORPOINT:20%">
-				<label for="col">Colorpoint</label><br><br>
-			<input type="radio" name="fav_coat" id="sol" value="SOLID:65%">
-				<label for="sol">Solid</label><br><br>
-			<input type="radio" name="fav_coat" id="bic"  value="BICOLOR:30%">
-				<label for="bic">Bi&mdash;Color</label><br><br>
-			<input type="radio" name="fav_coat" id="smo" value="SMOKED:36%">
-				<label for="smo">Smoked</label><br><br>
-			<input type="submit" value="Submit" onclick="selectOption()">
-			<input type="reset" value="reset">
-		</div>
-<br><br>
-<!--"https://webdevbasics.net/scripts/demo.php"-->
-			
 
-</form>
-</div>
+			<input type="radio" name="fav_coat" id="cal" value="CALICO:60%"/>
+				<label for="cal">Calico</label><br><br>
+
+			<input type="radio" name="fav_coat" id="tux"  value="TUXEDO:55%"/>
+				<label for="tux">Tuxedo</label><br><br>
+
+			<input type="radio" name="fav_coat" id="tor" value="TORTOISESHELL:30%"/>
+				<label for="tor">Tortoiseshell</label><br><br>
+
+			<input type="radio" name="fav_coat" id="col" value="COLORPOINT:20%"/>
+				<label for="col">Colorpoint</label><br><br>
+
+			<input type="radio" name="fav_coat" id="sol" value="SOLID:65%"/>
+				<label for="sol">Solid</label><br><br>
+
+			<input type="radio" name="fav_coat" id="bic"  value="BICOLOR:30%"/>
+				<label for="bic">Bi&mdash;Color</label><br><br>
+
+			<input type="radio" name="fav_coat" id="smo" value="SMOKED:36%"/>
+				<label for="smo">Smoked</label><br><br>
+<!--Email-->
+			<label for="email">Email</label><br>
+			<input type="email" id="email" name="email" required/><br><br>
+				
+<!--submitButton-->
+			<input type="submit" id="submitButton" value="Submit" onclick="selectOption()"/>
+			<input type="reset" value="reset"/>
+		</div>		
+				<br><br>
+			</form>
+				<p id="emailError"></p>
+		</div>
 </main>
 
 <!--footer section-->

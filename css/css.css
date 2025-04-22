@@ -37,6 +37,43 @@ img {
 	height: auto;  /*set height to auto scale image*/
 }
 
+#careContainer {
+	display: block;
+	background-image: linear-gradient(#f5f5f5, #fdfb85, #F5F5F5, #fdfb85, #f9ffa9, #F5F5F5);
+	padding-bottom: 50px;
+}
+#coatlength {
+	text-align: center;
+	padding-top: 20px;
+}
+#careImg {
+	display: block;
+	width: 30%;
+	height: auto;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#bathing {
+	text-align: left;
+	text-decoration-line: underline;
+	text-decoration-thickness: 3px;
+	text-decoration-color:#9d49ce;
+}
+
+p {
+	text-align: left;
+	margin-left: 70px;
+	margin-right: 50px;
+}
+
+
+
+
+
+
+
+
 
 /*STYLES FOR BODY*/
 body {

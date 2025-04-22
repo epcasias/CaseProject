@@ -62,3 +62,8 @@ function examineEmail(event) {
 }
 
 
+//CASE PROJECT #5: CREATE OBJECTS, CONSTURCTOR FUNCTION, ADD METHODS, & CREATE INSTANCES
+//Author: Eulyssia Casias
+//Date: 4/20/25
+
+

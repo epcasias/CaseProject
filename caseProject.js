@@ -67,3 +67,72 @@ function examineEmail(event) {
 //Date: 4/20/25
 
 
+
+
+
+//CASE PROJECT #6: ADD MAP SHOWING CURRENT LOCATION ON CONTACT PAGE
+//Author: Eulyssia Casias
+//Date: 4/23/25
+function initMap() {
+   
+    // Page objects
+    let displayMap = document.getElementById("displayMap");
+    let routeBox =    document.getElementById("routeBox");
+    
+    // Create a map to the Colors of Felines
+    let colorsOfFelines = {lat:35.236707896981564, lng:-101.82792273237715};
+    
+    let myMap = new google.maps.Map(displayMap, {
+       zoom: 11,
+       center: colorsOfFelines,//
+       fullscreenControl: false
+    });
+    
+    // Add a marker for the colors of felines
+    new google.maps.Marker({
+       position: colorsOfFelines,//
+       map: myMap,
+       title: "Colors Of Felines"
+    });
+    
+    // Get the device's current position
+    navigator.geolocation.getCurrentPosition(getPos, handleError);
+    
+    function getPos(pos) {
+       let myPosition = {
+          lat: pos.coords.latitude,
+          lng: pos.coords.longitude
+       }
+             
+       console.log(myPosition);
+       
+       // Set up direction service and rendering
+       let routeFind = new google.maps.DirectionsService();
+       let routeDraw = new google.maps.DirectionsRenderer();
+          
+       // Drive from current location to Colors of felines
+       let  myRoute = {
+          origin: myPosition,
+          destination: colorsOfFelines,//
+          travelMode: "DRIVING"
+       }  
+ 
+       // Generate directions for the route
+       routeFind.route(myRoute, function(result, status) {
+          if (status == "OK") {
+             routeDraw.setDirections(result);
+              //Display route and directions
+             routeDraw.setMap(myMap);
+             routeDraw.setPanel(routeBox);
+          } else {
+             routeBox.textContent = "Directions Unavailable: " + status;
+          }
+       }); 
+       
+    } 
+    
+    // In case of geolocation error
+    function handleError(err) {
+       console.log("Geolocation error: " + err.message);
+    } 
+ }

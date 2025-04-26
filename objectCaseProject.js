@@ -16,7 +16,7 @@ let coatType2 = new coatCare("Longhair", "<img src='images/longhair.jpg' id='car
 
 let htmlCode = "";
 
-for (let x of ) { //Got stuck here
+for (let x of coatCare) { //Got stuck here
 
   htmlCode = '<h1>COAT CARE</h1>'
 	'<h2 id="coatlength">Shorthair</h2>'

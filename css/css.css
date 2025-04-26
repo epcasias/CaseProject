@@ -68,12 +68,23 @@ p {
 }
 
 
+/* Map Styles */
 
-
-
-
-
-
+div#displayMap {
+	width: 40%;
+	padding-bottom: 30%;
+	height: 0;
+	margin: 20px auto;
+	border: 3px solid rgb(131, 45, 153);
+ }
+ 
+ div#routeBox {
+	width: 70%;
+	margin: 10px auto;
+	min-height: 50px;
+	border: 3px solid rgb(109, 58, 143);
+	text-align: center;
+ }
 
 /*STYLES FOR BODY*/
 body {

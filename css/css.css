@@ -162,6 +162,24 @@ hr {
 
 }
 
+#contactForm {
+	display: block;
+	border-style: solid;
+	border-color:#b5be2b;
+	border-width: 4px;
+	margin-left: 400px;
+	margin-right: 400px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	padding-left: 20px;
+	background-image: linear-gradient(to right, #feffbb, #f7f0fd, #feffbb);
+
+}
+/*input#name {
+	border-width: 4px;
+}*/
+
+
 /*STYLES FOR GALLERY*/
 #gallery { 
 		display: block;

@@ -77,7 +77,7 @@ function initMap() {
    
     // Page objects
     let displayMap = document.getElementById("displayMap");
-    let routeBox =    document.getElementById("routeBox");
+    let routeBox = document.getElementById("routeBox");
     
     // Create a map to the Colors of Felines
     let colorsOfFelines = {lat:35.236707896981564, lng:-101.82792273237715};
@@ -136,3 +136,39 @@ function initMap() {
        console.log("Geolocation error: " + err.message);
     } 
  }
+
+//CASE PROJECT #7: CREATE A ZIP CODE VERIFIER USING AJAX ON CONTACT PAGE
+//Author: Eulyssia Casias
+//Date: 5/5/25
+
+//Declare and get the input values
+let postalCode = document.getElementById("postalCode");
+let place = document.getElementById("place");
+let region = document.getElementById("region");
+let country = document.getElementById("country");
+
+postalCode.onblur = function() {
+            
+            let codeValue = postalCode.value;
+            let countryValue = country.value;
+            //Set the place & region to empty text strings to be filled in the readystatechange
+            place.value = "";
+            region.value = "";
+
+
+            let xhr = new XMLHttpRequest(); //use XMLHttpRequest object to send asynchronous request over HTTP
+
+            let url = `http://api.zippopotam.us/${countryValue}/${codeValue}` //set the ZIP code api 
+            //manage the changing request event
+            xhr.onreadystatechange= function(){
+            if(xhr.readyState === 4 && xhr.status === 200) //determine the current state of the request object
+            {
+                  let json = JSON.parse(xhr.response);
+                  place.value = json.places[0]["place name"]; //Get the value for the city that goes with the zip code
+                  region.value = json.places[0]["state abbreviation"]; //Get the value for the state that goes with the zip code
+            }
+      }
+
+      xhr.open("GET", url, true); //specify the GET method, url and true to set up asynchronous request
+      xhr.send(); //submit the request
+}

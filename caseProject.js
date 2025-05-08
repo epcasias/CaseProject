@@ -1,20 +1,24 @@
+
+$(function(){
+
 //CASE PROJECT #2: ADDING IF STATEMENT TO CONTACT PAGE
 //Author: Eulyssia casias
 //Date: 3/29/25
 //Write an if statement to input text into h4 element on my Contact page.
-    let heading1 = document.getElementById("insta");
-    let heading2 = document.getElementById("face");
-    let heading3 = document.getElementById("twit");
 
-    if (heading1) {
-        heading1.textContent = "Instagram: @ColorsOFelines";  
-    }
-    if (heading2) {
-        heading2.textContent = "Facebook: ColorsOFelines";
-    }
-    if (heading3) {
-        heading3.textContent = "Twitter: ColorsOFelines";
-    }
+    //let heading1 = document.getElementById("insta");
+    //let heading2 = document.getElementById("face");
+    //let heading3 = document.getElementById("twit");
+
+    // if (heading1) {
+    //      heading1.textContent = "Instagram: @ColorsOFelines";  
+    // }
+    // if (heading2) {
+    //     heading2.textContent = "Facebook: ColorsOFelines";
+    // }
+    // if (heading3) {
+    //      heading3.textContent = "Twitter: ColorsOFelines";
+    // }
 
 
 //CASE PROJECT #3: ADDING EXCEPTION HANDLING TO INDEX PAGE FORM
@@ -23,7 +27,7 @@
 //When the submit button is pushed without an option clicked, an error message will pop up
 
 //creating a function named selectOption
-function selectOption(event) {
+function selectOption() {
     //creating exception handling using try catch method
     try {
         
@@ -37,7 +41,6 @@ function selectOption(event) {
     }catch (error) {
         alert("SELECT AN OPTION to see results"); //Message in alert window
     }
-    event.preventDefault();
 }
 
 
@@ -172,3 +175,28 @@ postalCode.onblur = function() {
       xhr.open("GET", url, true); //specify the GET method, url and true to set up asynchronous request
       xhr.send(); //submit the request
 }
+
+})
+
+
+//CASE RPOJECT #8: APPLY JQUERY TO 3 SELECTORS
+//AUTHOR: Eulyssia Casias
+//DATE: 5/8/25
+
+$(function() {
+//using jquery to insert text. Replaces CaseProject#2
+    instaText = $("h4#insta").text("Instagram: @ColorsOFelines");
+    faceText = $("h4#face").text("Facebook: ColorsOFelines");
+    twitText = $("h4#twit").text("Twitter: ColorsOFelines");
+
+//fading In h1 element when website loads
+    $(document).ready(function() {
+        $("h1").hide().fadeIn("2000");
+    })
+//add a hover effect on images on index page
+    $("img#careImg").hover(function() {
+        $(this).css("width", "40%");
+    }, function(){
+        $(this).css("width", "30%");
+    })
+})
